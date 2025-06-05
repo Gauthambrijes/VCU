@@ -1,7 +1,6 @@
-Core/Src/Sensor_functions/LV_battery.o: \
- ../Core/Src/Sensor_functions/LV_battery.c \
- ../Core/Inc/Sensor_functions/LV_battery.h ../Core/Inc/main.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+Core/Src/Sensor_functions/Aero.o: ../Core/Src/Sensor_functions/Aero.c \
+ C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/Aero.h \
+ ../Core/Inc/main.h ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
@@ -34,11 +33,10 @@ Core/Src/Sensor_functions/LV_battery.o: \
  ../Core/Inc/driver_files/can_driver.h \
  ../Core/Inc/driver_files/comm_driver.h \
  ../Core/Inc/Sensor_functions/Encoders.h \
- ../Core/Inc/Sensor_functions/LV_battery.h \
+ C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/BMS.h \
  ../Core/Inc/Sensor_functions/Potentiometers.h \
- ../Core/Inc/Sensor_functions/Strain_gauge.h \
  ../Core/Inc/Sensor_functions/Temperature.h
-../Core/Inc/Sensor_functions/LV_battery.h:
+C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/Aero.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
@@ -74,7 +72,6 @@ Core/Src/Sensor_functions/LV_battery.o: \
 ../Core/Inc/driver_files/can_driver.h:
 ../Core/Inc/driver_files/comm_driver.h:
 ../Core/Inc/Sensor_functions/Encoders.h:
-../Core/Inc/Sensor_functions/LV_battery.h:
+C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/BMS.h:
 ../Core/Inc/Sensor_functions/Potentiometers.h:
-../Core/Inc/Sensor_functions/Strain_gauge.h:
 ../Core/Inc/Sensor_functions/Temperature.h:

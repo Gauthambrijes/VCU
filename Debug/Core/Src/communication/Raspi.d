@@ -33,9 +33,9 @@ Core/Src/communication/Raspi.o: ../Core/Src/communication/Raspi.c \
  ../Core/Inc/driver_files/can_driver.h \
  ../Core/Inc/driver_files/comm_driver.h \
  ../Core/Inc/Sensor_functions/Encoders.h \
- ../Core/Inc/Sensor_functions/LV_battery.h \
+ C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/BMS.h \
  ../Core/Inc/Sensor_functions/Potentiometers.h \
- ../Core/Inc/Sensor_functions/Strain_gauge.h \
+ C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/Aero.h \
  ../Core/Inc/Sensor_functions/Temperature.h
 ../Core/Inc/communication/Raspi.h:
 ../Core/Inc/main.h:
@@ -73,7 +73,7 @@ Core/Src/communication/Raspi.o: ../Core/Src/communication/Raspi.c \
 ../Core/Inc/driver_files/can_driver.h:
 ../Core/Inc/driver_files/comm_driver.h:
 ../Core/Inc/Sensor_functions/Encoders.h:
-../Core/Inc/Sensor_functions/LV_battery.h:
+C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/BMS.h:
 ../Core/Inc/Sensor_functions/Potentiometers.h:
-../Core/Inc/Sensor_functions/Strain_gauge.h:
+C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/Aero.h:
 ../Core/Inc/Sensor_functions/Temperature.h:

@@ -5,4 +5,6 @@
  *      Author: User
  */
 
-#include "Sensor_functions/Temperature.h"
+#include <Temperature.h>
+float Coolant_temp_1_val = 0.0f;
+float Coolant_temp_2_val = 0.0f;

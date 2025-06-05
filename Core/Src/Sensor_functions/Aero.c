@@ -5,4 +5,5 @@
  *      Author: User
  */
 
-#include "Sensor_functions/Strain_gauge.h"
+#include <Aero.h>
+float MAF_val = 0.0f;

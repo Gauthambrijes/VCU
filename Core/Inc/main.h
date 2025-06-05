@@ -37,9 +37,9 @@ extern "C" {
 #include "driver_files/can_driver.h"
 #include "driver_files/comm_driver.h"
 #include "Sensor_functions/Encoders.h"
-#include "Sensor_functions/LV_battery.h"
+#include <BMS.h>
 #include "Sensor_functions/Potentiometers.h"
-#include "Sensor_functions/Strain_gauge.h"
+#include <Aero.h>
 #include "Sensor_functions/Temperature.h"
 
 /* USER CODE END Includes */

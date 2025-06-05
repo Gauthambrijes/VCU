@@ -5,24 +5,24 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Sensor_functions/Aero.c \
+../Core/Src/Sensor_functions/BMS.c \
 ../Core/Src/Sensor_functions/Encoders.c \
-../Core/Src/Sensor_functions/LV_battery.c \
 ../Core/Src/Sensor_functions/Potentiometers.c \
-../Core/Src/Sensor_functions/Strain_gauges.c \
 ../Core/Src/Sensor_functions/Temperature.c 
 
 OBJS += \
+./Core/Src/Sensor_functions/Aero.o \
+./Core/Src/Sensor_functions/BMS.o \
 ./Core/Src/Sensor_functions/Encoders.o \
-./Core/Src/Sensor_functions/LV_battery.o \
 ./Core/Src/Sensor_functions/Potentiometers.o \
-./Core/Src/Sensor_functions/Strain_gauges.o \
 ./Core/Src/Sensor_functions/Temperature.o 
 
 C_DEPS += \
+./Core/Src/Sensor_functions/Aero.d \
+./Core/Src/Sensor_functions/BMS.d \
 ./Core/Src/Sensor_functions/Encoders.d \
-./Core/Src/Sensor_functions/LV_battery.d \
 ./Core/Src/Sensor_functions/Potentiometers.d \
-./Core/Src/Sensor_functions/Strain_gauges.d \
 ./Core/Src/Sensor_functions/Temperature.d 
 
 
@@ -33,7 +33,7 @@ Core/Src/Sensor_functions/%.o Core/Src/Sensor_functions/%.su Core/Src/Sensor_fun
 clean: clean-Core-2f-Src-2f-Sensor_functions
 
 clean-Core-2f-Src-2f-Sensor_functions:
-	-$(RM) ./Core/Src/Sensor_functions/Encoders.cyclo ./Core/Src/Sensor_functions/Encoders.d ./Core/Src/Sensor_functions/Encoders.o ./Core/Src/Sensor_functions/Encoders.su ./Core/Src/Sensor_functions/LV_battery.cyclo ./Core/Src/Sensor_functions/LV_battery.d ./Core/Src/Sensor_functions/LV_battery.o ./Core/Src/Sensor_functions/LV_battery.su ./Core/Src/Sensor_functions/Potentiometers.cyclo ./Core/Src/Sensor_functions/Potentiometers.d ./Core/Src/Sensor_functions/Potentiometers.o ./Core/Src/Sensor_functions/Potentiometers.su ./Core/Src/Sensor_functions/Strain_gauges.cyclo ./Core/Src/Sensor_functions/Strain_gauges.d ./Core/Src/Sensor_functions/Strain_gauges.o ./Core/Src/Sensor_functions/Strain_gauges.su ./Core/Src/Sensor_functions/Temperature.cyclo ./Core/Src/Sensor_functions/Temperature.d ./Core/Src/Sensor_functions/Temperature.o ./Core/Src/Sensor_functions/Temperature.su
+	-$(RM) ./Core/Src/Sensor_functions/Aero.cyclo ./Core/Src/Sensor_functions/Aero.d ./Core/Src/Sensor_functions/Aero.o ./Core/Src/Sensor_functions/Aero.su ./Core/Src/Sensor_functions/BMS.cyclo ./Core/Src/Sensor_functions/BMS.d ./Core/Src/Sensor_functions/BMS.o ./Core/Src/Sensor_functions/BMS.su ./Core/Src/Sensor_functions/Encoders.cyclo ./Core/Src/Sensor_functions/Encoders.d ./Core/Src/Sensor_functions/Encoders.o ./Core/Src/Sensor_functions/Encoders.su ./Core/Src/Sensor_functions/Potentiometers.cyclo ./Core/Src/Sensor_functions/Potentiometers.d ./Core/Src/Sensor_functions/Potentiometers.o ./Core/Src/Sensor_functions/Potentiometers.su ./Core/Src/Sensor_functions/Temperature.cyclo ./Core/Src/Sensor_functions/Temperature.d ./Core/Src/Sensor_functions/Temperature.o ./Core/Src/Sensor_functions/Temperature.su
 
 .PHONY: clean-Core-2f-Src-2f-Sensor_functions
 
