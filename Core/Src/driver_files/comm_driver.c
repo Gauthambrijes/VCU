@@ -17,12 +17,12 @@ extern DMA_HandleTypeDef hdma_spi1_tx;
 
 #define SPI_CS_GPIO_PORT  GPIOA
 #define SPI_CS_PIN        GPIO_PIN_3
-#define SPI_QUEUE_SIZE  16  // Small queue for VCU (adjust as needed)
+#define SPI_QUEUE_SIZE  16  // Small queue for VCU
 #define SPI_TIMEOUT_MS  50 // Timeout for SPI operations
 
 typedef enum {
     MSG_FLOAT_WITH_TYPE = 0,  // 1-byte type + 4-byte float
-    MSG_RAW_16BIT       = 1   // 2-byte raw uint16_t (no prefix)
+    MSG_RAW_16BIT       = 1   // 2-byte raw uint16_t error codes
 } SPI_MessageType;
 
 typedef struct {
@@ -52,7 +52,7 @@ void SPI_CS_Disable(void) {
 
 // For sending floats with type prefix
 HAL_StatusTypeDef Transmit_SensorVals(uint8_t val_type, float value) {
-    if (queue_tail + 1 % SPI_QUEUE_SIZE == queue_head) return HAL_BUSY;
+    if ((queue_tail + 1) % SPI_QUEUE_SIZE == queue_head) return HAL_BUSY;
 
     __disable_irq();
     SPI_queue[queue_tail].msg_type = MSG_FLOAT_WITH_TYPE;
@@ -67,7 +67,7 @@ HAL_StatusTypeDef Transmit_SensorVals(uint8_t val_type, float value) {
 
 // For sending raw 16-bit values
 HAL_StatusTypeDef Transmit_ErrorCode(uint16_t value) {
-    if (queue_tail + 1 % SPI_QUEUE_SIZE == queue_head) return HAL_BUSY;
+    if ((queue_tail + 1) % SPI_QUEUE_SIZE == queue_head) return HAL_BUSY;
 
     __disable_irq();
     SPI_queue[queue_tail].msg_type = MSG_RAW_16BIT;
@@ -121,7 +121,7 @@ HAL_StatusTypeDef Process_SPI_Queue(void) {
 // --- SPI Transmission Complete Callback ---
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
     if (hspi == SPI) {
-        // Process next message (if any)
+        // Process next message
     	SPI_CS_Disable();
         Process_SPI_Queue();
     }
