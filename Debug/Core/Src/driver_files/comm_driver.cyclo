@@ -1,4 +1,7 @@
-../Core/Src/driver_files/comm_driver.c:33:19:Transmit_SensorVal_to_Rpi	4
-../Core/Src/driver_files/comm_driver.c:56:19:Process_I2C_Queue	2
-../Core/Src/driver_files/comm_driver.c:77:6:HAL_I2C_MasterTxCpltCallback	2
-../Core/Src/driver_files/comm_driver.c:85:6:HAL_I2C_ErrorCallback	2
+../Core/Src/driver_files/comm_driver.c:44:6:SPI_CS_Enable	1
+../Core/Src/driver_files/comm_driver.c:48:6:SPI_CS_Disable	1
+../Core/Src/driver_files/comm_driver.c:54:19:Transmit_SensorVals	3
+../Core/Src/driver_files/comm_driver.c:69:19:Transmit_ErrorCode	3
+../Core/Src/driver_files/comm_driver.c:84:19:Process_SPI_Queue	5
+../Core/Src/driver_files/comm_driver.c:122:6:HAL_SPI_TxCpltCallback	2
+../Core/Src/driver_files/comm_driver.c:131:6:HAL_SPI_ErrorCallback	2

@@ -41,7 +41,7 @@ extern "C" {
 #include "Sensor_functions/Potentiometers.h"
 #include <Aero.h>
 #include "Sensor_functions/Temperature.h"
-
+#include <config.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

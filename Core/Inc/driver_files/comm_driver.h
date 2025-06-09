@@ -5,6 +5,8 @@
  *      Author: User
  */
 #include "main.h"
+#include <config.h>
+#include <string.h>
 #ifndef INC_COMM_DRIVER_H_
 #define INC_COMM_DRIVER_H_
 
@@ -34,11 +36,13 @@ enum I2C_opcodes{
 //Define functions
 
 
-HAL_StatusTypeDef Transmit_SensorVal_to_Rpi(uint8_t val_type, const float *value);
-HAL_StatusTypeDef Process_I2C_Queue(void);
-void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef *hi2c);
-void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c);
-
+HAL_StatusTypeDef Transmit_SensorVals(uint8_t val_type, float value);
+HAL_StatusTypeDef Transmit_ErrorCode(uint16_t value);
+HAL_StatusTypeDef Process_SPI_Queue(void);
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi);
+void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi);
+void SPI_CS_Enable(void);
+void SPI_CS_Disable(void);
 
 
 #endif /* INC_COMM_DRIVER_H_ */
