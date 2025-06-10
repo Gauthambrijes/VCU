@@ -9,5 +9,8 @@
 #define INC_ADC_DRIVER_H_
 
 
+void ADC_Start();
+void Convert_ADC_Values(void);
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 
 #endif /* INC_ADC_DRIVER_H_ */

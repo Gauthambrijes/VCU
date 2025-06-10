@@ -1,6 +1,13 @@
 - [x] Create required folders and files  
 - [ ] ADC drivers  
-- [ ] I2C driver  
+- [x] I2C driver  
 - [ ] CAN drivers  
 - [ ] Debug functions  
-- [ ] Sensor specific functions
+- [ ] Sensor specific functions  
+  - [ ] APPS  
+  - [ ] Damper POTS  
+  - [ ] BPS  
+  - [ ] Steering position  
+  - [ ] Coolant temperature  
+  - [ ] Wheel Speed  
+  - [ ] MAF  

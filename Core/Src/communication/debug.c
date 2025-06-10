@@ -7,6 +7,4 @@
 
 #include <debug.h>
 
-void summalammadoomalumma(void){
 
-}
