@@ -1,5 +1,5 @@
 - [x] Create required folders and files  
-- [ ] ADC drivers  
+- [x] ADC drivers  
 - [x] I2C driver  
 - [ ] CAN drivers  
 - [ ] Debug functions  
