@@ -33,6 +33,8 @@ Core/Src/Sensor_functions/Aero.o: ../Core/Src/Sensor_functions/Aero.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Core/Inc/communication/debug.h ../Core/Inc/communication/Raspi.h \
  ../Core/Inc/driver_files/ADC_driver.h \
  ../Core/Inc/driver_files/can_driver.h \
@@ -76,6 +78,8 @@ C:/Users/User/STM32CubeIDE/VCU/ecu/Core/Inc/Sensor_functions/Aero.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 ../Core/Inc/communication/debug.h:
 ../Core/Inc/communication/Raspi.h:
 ../Core/Inc/driver_files/ADC_driver.h:

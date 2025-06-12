@@ -5,3 +5,5 @@
 ../Core/Src/driver_files/comm_driver.c:84:19:Process_SPI_Queue	5
 ../Core/Src/driver_files/comm_driver.c:122:6:HAL_SPI_TxCpltCallback	2
 ../Core/Src/driver_files/comm_driver.c:131:6:HAL_SPI_ErrorCallback	2
+../Core/Src/driver_files/comm_driver.c:141:9:GetDriverProfile	1
+../Core/Src/driver_files/comm_driver.c:150:6:Poll_TillRpiStarts	2

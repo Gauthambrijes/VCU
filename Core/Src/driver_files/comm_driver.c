@@ -12,7 +12,7 @@
 extern SPI_HandleTypeDef hspi1;
 extern DMA_HandleTypeDef hdma_spi1_tx;
 #define SPI &hspi1
-
+#define RPI_AWAKE 0x08
 //FECU CODE
 
 #define SPI_CS_GPIO_PORT  GPIOA
@@ -136,6 +136,27 @@ void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi) {
 	}
 }
 
+//Use this as a pre-start function
+
+uint8_t GetDriverProfile(){
+	uint8_t Rx;
+	uint8_t Tx = 0xFE;
+	SPI_CS_Enable();
+	HAL_SPI_TransmitReceive(SPI, &Tx, &Rx, 1, 10);
+	SPI_CS_Disable();
+	return Rx;
+}
+
+void Poll_TillRpiStarts(){
+	uint8_t Rx;
+	uint8_t Tx = 0x0F;
+	while(1){
+		HAL_SPI_TransmitReceive(SPI,&Tx, &Rx, 1, 5);
+		if(Rx==RPI_AWAKE){
+			break;
+		}
+	}
+}
 
 #elif RECU
 
@@ -149,5 +170,8 @@ void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi) {
 
 #else
 #error "Both FECU and RECU is not defined"
+
+
+
 #endif
 

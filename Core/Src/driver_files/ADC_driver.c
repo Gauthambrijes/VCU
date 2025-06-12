@@ -2,8 +2,18 @@
  * ADC_driver.c
  *
  *  Created on: Jun 3, 2025
- *      Author: User
+ *      Author: Ajay
  */
+
+/*
+
+
+
+MAKE SURE TO CHANGE RANKS ACCORDING TO SENSORS
+
+
+
+*/
 #include <ADC_driver.h>
 
 #define ADC_BUFFER_SIZE 6
@@ -12,8 +22,8 @@ extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;
 
 __attribute__((aligned(32))) struct {
-    uint16_t samples[ADC_BUFFER_SIZE];  // Your actual data
-    uint16_t _reserved[16 - ADC_BUFFER_SIZE]; // Padding to 32 bytes
+    uint16_t samples[ADC_BUFFER_SIZE];  // Actual data
+    uint16_t _reserved[16 - ADC_BUFFER_SIZE]; // Padding to 32 bytes, These are just fillers like your life
 } ADC_raw;
 
 float ADC_V[ADC_BUFFER_SIZE];
@@ -40,4 +50,5 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 	//Conversion
 	Convert_ADC_Values();
 	//Call the function that converts and returns Voltage to sensor values
+
 }
