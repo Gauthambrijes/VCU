@@ -47,8 +47,5 @@ void Convert_ADC_Values(void) {
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
 	SCB_InvalidateDCache_by_Addr((uint16_t*)&ADC_raw, sizeof(ADC_raw));
-	//Conversion
-	Convert_ADC_Values();
-	//Call the function that converts and returns Voltage to sensor values
-
+	APPS_SCS(ADC_raw.samples[0], ADC_raw.samples[1]);
 }

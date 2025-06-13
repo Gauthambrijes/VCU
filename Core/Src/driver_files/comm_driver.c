@@ -7,7 +7,6 @@
 
 #include <comm_driver.h>
 
-
 #ifdef FECU
 extern SPI_HandleTypeDef hspi1;
 extern DMA_HandleTypeDef hdma_spi1_tx;
