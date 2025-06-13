@@ -448,7 +448,7 @@ static void MX_TIM6_Init(void)
 /**
   * @brief TIM7 Initialization Function
   * @param None
-  * @retval None
+  * @retval Non
   */
 static void MX_TIM7_Init(void)
 {
